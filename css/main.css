@@ -5,14 +5,18 @@ header {
   height: 100%;
 }
 
+body {
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 header {
-  background: url('../img/bg.png') center fixed;
-  background-size: cover;
+ /* background: url('../img/bg.png') center fixed;
+  background-size: cover;*/
 }
 
 .header-text {
@@ -321,7 +325,7 @@ header {
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0, 153, 255,.6);
   background-image: url('../img/portfolios/zoom.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -413,3 +417,133 @@ header {
   }
 }
 */
+
+
+.feedback {
+  padding: 60px 0;
+}
+
+.feedback-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.feedback input,
+.feedback textarea {
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.feedback input {
+  height: 48px;
+}
+
+.feedback textarea {
+  height: 185px !important;
+}
+
+.feedback-submit {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.feedback-submit button {
+  text-transform: uppercase;
+}
+
+
+
+.map > h2 {
+  background-color: #444;
+  color: white;
+  text-transform: uppercase;
+  padding: 40px 0;
+  margin: 0;
+  text-align: center;
+}
+
+#map-canvas {
+  width: 100%;
+  height: 400px;
+}
+
+
+.footer-top {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer-top .social-media {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.footer-top .social-media > li {
+  display: inline-block;
+  margin: 0 5px;
+  background-color: #888;
+  border-radius: 4px;
+  width: 42px;
+  height: 42px;
+  transition: background-color .4s;
+}
+
+.footer-top .social-media > li:hover {
+  background-color: #444;
+}
+
+.footer-top .social-media .media-icon {
+  width: 42px;
+}
+
+
+.footer-bottom {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+.footer-bottom > h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-bottom > p {
+  margin: 0;
+}
+
+
+.back-block {
+  background-color: white;
+  width: 128px;
+  height: 128px;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -64px;
+  margin-top: -64px;
+  transform-style: preserve-3d;
+  animation: ANIMATION 2s infinite;
+}
+
+@keyframes ANIMATION {
+  0%   { transform: rotate(0); }
+  50%   { transform: rotateY(180deg); }
+  100%   { transform: rotateZ(180deg); }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+
+.navbar-main {
+  top: -60px !important;
+  transition: top .4s;
+}
+
+.navbar-show {
+  top: 0 !important;
+}

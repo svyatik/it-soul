@@ -8,57 +8,98 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet'>
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  
   <script src="js/jquery.mixitup.min.js"></script>
   
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400' rel='stylesheet'>
   <script src="js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+
+  <link rel="stylesheet" href="css/animate.css">
+  <script src="js/wow.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="js/script.js"></script>
+
 </head>
-<body>
-  <header class="img-holder" data-type="background" data-speed="5">
+<body style="overflow-y: hidden">
+
+  <div class="back" style="background-color: #0066CC; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 90; -webkit-perspective: 1000;">
+    <div class="back-block"></div>
+  </div>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top navbar-main">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">IT-SOUL</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#feutures">Feutures</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="background" style="background: url('img/bg.png') no-repeat center 0 fixed; height: 100%; position: relative;" name="home">
     <div class="header-text">
-      <h1 class="header-title">it-soul</h1>
-      <h2>The New, Modern Web-Studio</h2>
+      <h1 class="header-title wow fadeInDown" data-wow-delay="1s">it-soul</h1>
+      <h2 class="wow fadeInDown" data-wow-delay="1s">The New, Modern Web-Studio</h2>
       <div class="line"></div>
-      <h3 class="header-about" style="">
+      <h3 class="header-about wow fadeInUp" data-wow-delay="1s">
         <span>We are an offshore software development company from the heart of Lviv.</span>
         <span>We create outstanding websites, creative concepts, user friendly softwares and vibrant identities</span>
       </h3>
-      <button class="it">SAY HELLO</button>
+      <button class="it wow fadeInUp" data-wow-delay="1s">SAY HELLO</button>
     </div>
-  </header>
+  </section>
 
+<div>
   <h2 class="start">The new age in The site building</h2>
 
-  <div class="container">
+  <div class="container" name="feutures">
     <div class="row feutures">
-      <div class="col-md-6 col-lg-4 col-sm-6 cont">
+      <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='30s'">
         <span class="feutures-icon offshore"></span>
         <h1>Web application development</h1>
         <p>Utilizing the latest web technologies, we provide services in development of content-rich, database-driven web applications with easy to use interfaces that match your business needs.</p>
       </div>
-      <div class="col-md-6 col-lg-4 col-sm-6 cont">
+      <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
         <span class="feutures-icon website"></span>
         <h1>Website design &amp; developer</h1>
         <p>With a high-level creative standard, we enhance the user's experience with design that is meaningful and timeless.</p>
       </div>
-      <div class="col-md-6 col-lg-4 col-sm-6 cont">
+      <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
         <span class="feutures-icon pro"></span>
         <h1>Logo, Brochure &amp; Graphic Design</h1>
         <p>We create beautiful, clean and simple design that best represent your brand and which clearly communicates with your audience.</p>
       </div>
-      <div class="col-md-6 col-lg-4 col-sm-6 cont">
+      <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
         <span class="feutures-icon globe"></span>
         <h1>Search engine optimization</h1>
         <p>Our optimized coding practice helps web pages load faster and index better on search engine results like Google with the right keywords.</p>
       </div>
-      <div class="col-md-6 col-lg-4 col-sm-6 cont">
+      <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
         <span class="feutures-icon host"></span>
         <h1>Domain &amp; hosting</h1>
         <p>Based on our experience, we choose the most suitable, stable and reliable web hosting server that best fits the scale of your website.</p>
       </div>
-      <div class="col-md-6 col-lg-4 col-sm-6 cont">
+      <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
         <span class="feutures-icon maintenance"></span>
         <h1>Software &amp; Website maintenance</h1>
         <p>Websites need to work. And our company as best to service your site</p>
@@ -67,11 +108,28 @@
   </div>
 
 
+  <section class="background" style="background: url('img/bg-3.png') no-repeat center 0 fixed; position: relative; background-color: rgba(0,0,0,.1)" name="testimonials">
+    <div style="background-color: rgba(0,0,0,.6); width: 100%; text-align: center;">
+      <h1 style="text-transform: uppercase; color: white; padding: 70px 0">Here's what our customers are saying!</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+    <div class="col-sm-12" style="color: white; padding: 75px 0 100px 0; text-align: center">
+      <h3>DESIGN WORKS IF IT'S AUTHENTIC, INSPIRED, AND HAS A CLEAR POINT OF VIEW. IT CAN'T BE A COLLECTION OF INPUT.</h3>
+      <div class="line" style="margin: 20px auto 0 auto"></div>
+      <p>- HARRY POTTER</p>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
   <!-- PORTFOLIO-CONTAINER -->
-  <div class="container-full portfolio-container">
+  <div class="container-full portfolio-container" name="portfolio">
     <div class="row-full">
       <div class="col-sm-12">
         <h1>Our portfolio</h1>
+        <h3>It is our most favorite projects</h3>
 
         <ul id="filters">
           <li><span class="filter active" data-filter="app card icon logo web">Show All</span></li>
@@ -84,12 +142,14 @@
     </div>
 
     <div class="container">
-      <div class="row-full" id="portfoliolist">
+      <div class="row" id="portfoliolist">
 
         <a href="#" class="col-xs-6 col-sm-4 col-lg-3 portfolio logo" data-cat="logo">
+          
           <img src="img/portfolios/logo/1.jpg" alt> <!-- Background image for tile -->
           <div></div> <!-- Tiles background on hover -->
           <span>First Website</span> <!-- Tiles title on hover -->
+        
         </a>
 
         <div class="col-lg-3 col-sm-4 col-xs-6 portfolio logo" data-cat="logo">
@@ -144,7 +204,94 @@
     </div> <!-- ./container -->
   </div>
 
-  <div style="width: 100%; height: 1000px; background-color: #999"></div>
+  <section class="background numbers" style="background: url('img/bg-2.png') no-repeat center 0 fixed; position: relative; width: 100%">
+    <div style="text-align: center; color: white; text-transform: uppercase; background-color: rgba(0,0,0,.6)">
+      <h1 style="padding: 60px 0; margin: 0">IT-SOUL in numbers</h1>
+    </div>
+    <div class="container" style="text-align: center; color: white; padding: 128px 0;">
+      <div class="row">
+        <div class="col-sm-3 wow fadeInDown">
+          <span style="background-color: rgba(0,0,0,.6); width: 96px; height: 96px; border-radius: 4px; display: inline-block; background-image: url(img/finish.svg); background-size: 64px; background-position: center; background-repeat: no-repeat"></span>
+          <h1 class="number-count" style="color: white; margin: 0; font-size: 3.2em; font-weight: 100">25</h1>
+          <p style="color: white; text-transform: uppercase; font-size: 1.2em">projects completed</p>
+        </div>
 
+        <div class="col-sm-3 wow fadeInDown">
+          <span style="background-color: rgba(0,0,0,.6); width: 96px; height: 96px; border-radius: 4px; display: inline-block; background-image: url(img/happy.svg); background-size: 64px; background-position: center; background-repeat: no-repeat"></span>
+          <h1 class="number-count" style="color: white; margin: 0; font-size: 3.2em; font-weight: 100">25</h1>
+          <p style="color: white; text-transform: uppercase; font-size: 1.2em">happy clients</p>
+        </div>
+
+        <div class="col-sm-3 wow fadeInDown">
+          <span style="background-color: rgba(0,0,0,.6); width: 96px; height: 96px; border-radius: 4px; display: inline-block; background-image: url(img/coffee.svg); background-size: 64px; background-position: center; background-repeat: no-repeat"></span>
+          <h1 class="number-count" style="color: white; margin: 0; font-size: 3.2em; font-weight: 100">62</h1>
+          <p style="color: white; text-transform: uppercase; font-size: 1.2em">Cups of coffee drunk</p>
+        </div>
+
+        <div class="col-sm-3 wow fadeInDown">
+          <span style="background-color: rgba(0,0,0,.6); width: 96px; height: 96px; border-radius: 4px; display: inline-block; background-image: url(img/time.svg); background-size: 64px; background-position: center; background-repeat: no-repeat"></span>
+          <h1 class="number-count" style="color: white; margin: 0; font-size: 3.2em; font-weight: 100">256</h1>
+          <p style="color: white; text-transform: uppercase; font-size: 1.2em">Hours of work</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <form class="container feedback" name="contact" style="position: relative">
+    
+    <div class="row">
+      <div class="closeThis">
+      <div class="col-sm-12 feedback-title">
+        <h2>GET IN TOUCH, LET'S WORK TOGETHER</h2>
+      </div>
+      <div class="col-sm-6 wow fadeInLeft">
+        <input class="form-control" id="feedName" type="text" placeholder="Name" tabindex="1" required>
+        <input class="form-control" id="feedEmail" type="email" placeholder="Email" tabindex="2" required>
+        <input class="form-control" id="feedPhone" type="phone" placeholder="Phone" tabindex="3" required>
+      </div>
+      <div class="col-sm-6 wow fadeInRight">
+        <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" placeholder="Message" tabindex="4" required></textarea>
+      </div>
+      <div class="col-sm-12 feedback-submit">
+        <button class="btn btn-default" id="feedback-submit" type="submit" tabindex="5">Send Message</button>
+      </div>
+      </div>
+    </div>
+
+    <div class="orag" style="position: absolute; width: 100%; top: 0; left: 0; overflow: hidden; display: none; opacity: 0; height: 0; background-color: white; padding: 100px 0; text-align: center">
+      <h1>THANK YOU</h1>
+    </div>
+
+  </form>
+
+  <section class="map">
+    <h2>Let's find us</h2>
+    <div id="map-canvas"></div>
+  </section>
+
+  <section class="footer-top">
+    <ul class="social-media wow zoomInUp">
+      <li><a href="http://vk.com"><img class="media-icon" src="img/vk.svg" alt></a></li>
+      <li><a href="http://fb.com"><img class="media-icon" src="img/fb.svg" alt></a></li>
+      <li><a href="http://twitter.com"><img class="media-icon" src="img/tw.svg" alt></a></li>
+      <li><a href="http://googleplus.com"><img class="media-icon" src="img/gp.svg" alt></a></li>
+    </ul>
+    <div class="wow slideInUp">
+    <a style="color: black" href="tel:+380637410361">+38 (063) 741 03 61</a>
+    <p style="display: inline">|</p>
+    <a style="color: #FFCC00" href="mailto:info@it-soul.com.ua">info@it-soul.com.ua</a>
+    <p>123 L'viv, Ukraine</p>
+  </div>
+  </section>
+
+  <section class="footer-bottom">
+    <h1>IT-SOUL</h1>
+    <p style="color: #FFCC00">Made in Ukraine</p>
+    <p>© 2015 All rights reserved.</p>
+  </section>
+
+</div>
 </body>
 </html>
