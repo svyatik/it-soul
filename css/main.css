@@ -14,9 +14,13 @@ body {
   padding: 0;
 }
 
-header {
- /* background: url('../img/bg.png') center fixed;
-  background-size: cover;*/
+.website-header {
+ /*  background-image: url('img/bg.png');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center; */
+ height: 100%; position: relative;
+
 }
 
 .header-text {
@@ -150,6 +154,34 @@ header {
 .pro {
   background-image: url(../img/about/pro.svg);
   background-color: #80CCCC;
+}
+
+
+
+
+/* Testimonials */
+.testimonials {
+  position: relative;
+  background-color: rgba(0,0,0,.1);
+}
+
+.testimonials > h1 {
+  text-transform: uppercase;
+  color: white;
+  padding: 70px 0;
+  background-color: rgba(0,0,0,.6);
+  text-align: center;
+}
+
+.testimonials-content {
+  color: white;
+  padding: 75px 0 100px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.testimonials-content .line {
+  margin: 20px auto 0 auto;
 }
 /*.feutures {
   padding: 0 !important;
@@ -514,8 +546,20 @@ header {
 }
 
 
-.back-block {
-  background-color: white;
+.preloader {
+  background-color: #0066CC;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-perspective: 1000;
+     -moz-perspective: 1000;
+          perspective: 1000;
+}
+
+.preloader-block {
   width: 128px;
   height: 128px;
   z-index: 100;
@@ -526,12 +570,19 @@ header {
   margin-top: -64px;
   transform-style: preserve-3d;
   animation: ANIMATION 2s infinite;
+  background-image: url('../img/logo.svg');
+  background-size: 128px;
+  background-position: center;
 }
 
 @keyframes ANIMATION {
-  0%   { transform: rotate(0); }
+  /* 0%   { transform: rotate(0); }
   50%   { transform: rotateY(180deg); }
-  100%   { transform: rotateZ(180deg); }
+  100%   { transform: rotateZ(180deg); } */
+  0% { transform: rotate(0); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .overflow-hidden {

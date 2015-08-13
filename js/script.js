@@ -1,6 +1,6 @@
 $ (window).load (function () {
 
-    $ ('.back').delay (1000).animate ({
+    $ ('.preloader').delay (500).animate ({
         height: 0,
         opacity: 0
     }, function () {
@@ -165,11 +165,7 @@ $ (window).load (function () {
 
 var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 
-var marker = new google.maps.Marker ({
-            position: cord,
-            map: map,
-            title: 'This is our Office'
-        });
+
   }
   initialize ();
 
