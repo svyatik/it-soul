@@ -9,7 +9,7 @@ $ (window).load (function () {
     });
 
 
-    var $win = $(window);
+    var $win = $ (window);
     $ ('.background').each (function (){
         var scroll_speed = 3;
         var $this = $ (this);
@@ -25,7 +25,7 @@ $ (window).load (function () {
     var scrollTime = 0.4;
     var scrollDistance = 150;
 
-    $window.on("mousewheel DOMMouseScroll", function (event){
+    $window.on ("mousewheel DOMMouseScroll", function (event){
         event.preventDefault ();
 
         var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail / 3;
