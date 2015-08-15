@@ -5,7 +5,7 @@ $email = $_REQUEST["email"];
 $phone = $_REQUEST["phone"];
 $msg = $_REQUEST["msg"];
 
-$to      = 'barsic.plus@gmail.com';
+$to      = 'yarema.aum@gmail.com';
 $subject = 'From Our Clients';
 $message = $msg;
 $headers = 'From: webmaster@example.com' . "\r\n" .
