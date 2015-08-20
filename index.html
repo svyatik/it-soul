@@ -32,29 +32,32 @@ THE SOFTWARE. -->
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
   <!-- Include Bootstrap Libraries -->
-  <script src="js/bootstrap.min.js" async></script>
+  <script src="js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
 
   <!-- External Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400' rel='stylesheet'>
 
   <!-- Libraries for smooth scrolling -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" async></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js" async></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" ></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 
   <!-- Library for filter portfolio -->
-  <script src="js/jquery.mixitup.min.js" async></script>
+  <script src="js/jquery.mixitup.min.js"></script>
 
   <!-- Include Google Maps lib -->
   <script src="https://maps.googleapis.com/maps/api/js"></script>
 
   <!-- Include lib for animation -->
-  <script src="js/wow.min.js" async></script>
+  <script src="js/wow.min.js"></script>
   <link rel="stylesheet" href="css/animate.css">
 
   <!-- Include main CSS and JS files -->
   <link href="css/main.css" rel="stylesheet">
-  <script src="js/script.js" async></script>
+  <script src="js/script.js"></script>
+
+  <link rel="stylesheet" href="css/lightslider.min.css">
+  <script src="js/lightslider.min.js"></script>
 </head>
 
 <body style="overflow-y: hidden">
@@ -90,7 +93,7 @@ THE SOFTWARE. -->
 
 
   <!-- WEBSITE HOME SECTION -->
-  <section class="background website-header" style="background: url('img/bg.png') no-repeat center 0 fixed;" name="home">
+  <section class="background website-header" style="background: url('img/bg.png') no-repeat center 0 fixed; position: relative" name="home">
     <div class="header-text">
       <h1 class="header-title wow fadeInDown" data-wow-delay="1s">it-soul</h1>
       <h2 class="wow fadeInDown" data-wow-delay="1s">The New, Modern It Company</h2>
@@ -101,6 +104,7 @@ THE SOFTWARE. -->
       </h3>
       <a class="it wow fadeInUp" data-wow-delay="1s" href="#contact">CONTACT WITH US</a>
     </div>
+    <a class="arrow" href="#feutures"></a>
   </section>
 
   <div>
@@ -108,32 +112,32 @@ THE SOFTWARE. -->
 
     <div class="container" name="feutures">
       <div class="row-full feutures">
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX" data-wow-delay='0.1s'>
           <span class="feutures-icon website"></span>
           <h1>Website design &amp; developer</h1>
           <p>With a high-level creative standard, we enhance the user's experience with design that is meaningful and timeless.</p>
         </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
           <span class="feutures-icon maintenance"></span>
           <h1>Administration</h1>
           <p>We have the big experience in system administration. We specialize on Windows Server, Gnu/Linux, *BSD, and others </p>
         </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='30s'">
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='30s'" data-wow-delay='0.1s'>
           <span class="feutures-icon offshore"></span>
           <h1>Web application development</h1>
           <p>Utilizing the latest web technologies, we provide services in development of content-rich, database-driven web applications with easy to use interfaces that match your business needs.</p>
         </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
           <span class="feutures-icon pro"></span>
           <h1>Logo, Brochure &amp; Graphic Design</h1>
           <p>We create beautiful, clean and simple design that best represent your brand and which clearly communicates with your audience.</p>
         </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
           <span class="feutures-icon globe"></span>
           <h1>Search engine optimization</h1>
           <p>Our optimized coding practice helps web pages load faster and index better on search engine results like Google with the right keywords.</p>
         </div>
-        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'">
+        <div class="col-md-6 col-lg-4 col-sm-6 cont wow flipInX data-wow-delay='3s'" data-wow-delay='0.1s'>
           <span class="feutures-icon host"></span>
           <h1>Domain &amp; hosting</h1>
           <p>Based on our experience, we choose the most suitable, stable and reliable web hosting server that best fits the scale of your website.</p>
@@ -142,15 +146,29 @@ THE SOFTWARE. -->
     </div>
 
     <!-- TESTIMONIALS SECTION -->
-    <section class="background testimonials" style="background: url('img/bg-3.png') no-repeat center 0 fixed;" name="testimonials">
+    <section class="background testimonials" style="background: url('img/bg-4.png') no-repeat center 0 fixed;" name="testimonials">
       <h1>Here is what our customers say</h1>
 
       <div class="container">
         <div class="row-full">
           <div class="col-sm-12 testimonials-content">
-            <h3>DESIGN WORKS IF IT'S AUTHENTIC, INSPIRED, AND HAS A CLEAR POINT OF VIEW. IT CAN'T BE A COLLECTION OF INPUT.</h3>
-            <div class="line"></div>
-            <p>- HARRY POTTER</p>
+            <span class="quote"></span>
+            <ul id="imageGallery">
+
+              <li>
+                <h3>Super job done fast! I recommend to the Executive for projects with hosting / domains and mail servers</h3>
+                <div class="line"></div>
+                <p>PAVLO MALCOVISH / malko.in.ua</p>
+              </li>
+
+              <li>
+                <h3>The project was completed within the specified period</h3>
+                <div class="line"></div>
+                <p>Dmitry Trozenko</p>
+              </li>
+
+            </ul>
+
           </div>
         </div>
       </div>
@@ -161,9 +179,8 @@ THE SOFTWARE. -->
     <!-- PORTFOLIO-CONTAINER -->
     <div class="container-full portfolio-container" name="portfolio">
       <div class="row-full">
-        <div class="col-sm-12">
-          <h1>Our portfolio</h1>
-          <h3>These are our most favourite projects.</h3>
+        <div class="col-sm-12" style="text-transform: uppercase; padding: 60px 0; margin: 0">
+          <h1 style="margin: 0; padding: 0">Our portfolio</h1>
 
           <ul id="filters">
             <li><span class="filter active" data-filter="logo web">Show All</span></li>
@@ -175,7 +192,7 @@ THE SOFTWARE. -->
       </div>
 
       <div class="container">
-        <div class="row" id="portfoliolist">
+        <div class="row" id="portfoliolist" style="margin-bottom: 60px">
 
           <a class="col-xs-6 col-sm-4 col-lg-3 portfolio web" href="http://dev.orgplan.ru" target="_blank" data-cat="web">
             <img src="img/portfolios/orgplan.png" alt> <!-- Background image for tile -->
@@ -183,13 +200,13 @@ THE SOFTWARE. -->
             <span>Orgplan</span> <!-- Tiles title on hover -->
           </a>
 
-          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio web" href="http://movewheels.com" target="_blank" data-cat="web">
+          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio web logo" href="http://movewheels.com" target="_blank" data-cat="web logo">
             <img src="img/portfolios/movewheels.png" alt> <!-- Background image for tile -->
             <div></div> <!-- Tiles background on hover -->
             <span>Movewheels</span> <!-- Tiles title on hover -->
           </a>
 
-          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio web" href="http://posilka.ua" target="_blank" data-cat="web">
+          <a class="col-lg-3 col-sm-4 col-xs-6 portfolio web logo" href="http://posilka.ua" target="_blank" data-cat="web logo">
             <img src="img/portfolios/posilka.png" alt> <!-- Background image for tile -->
             <div></div> <!-- Tiles background on hover -->
             <span>Posilka.ua</span> <!-- Tiles title on hover -->
@@ -221,66 +238,70 @@ THE SOFTWARE. -->
 
         </div> <!-- ./row -->
       </div> <!-- ./container -->
-    </div>
+    </div> <!-- ./portfolio-container -->
 
-    <section class="background numbers" style="background: url('img/bg-2.png') no-repeat center 0 fixed; position: relative; width: 100%">
-      <div style="text-align: center; color: white; text-transform: uppercase; background-color: rgba(0,0,0,.6)">
-        <h1 style="padding: 60px 0; margin: 0">IT-SOUL in numbers</h1>
-      </div>
-      <div class="container" style="text-align: center; color: white; padding: 128px 0;">
+
+    <!-- IT-SOUL IN NUMBERS -->
+    <section class="background counter" style="background: url('img/bg-2.png') no-repeat center 0 fixed;">
+      <h1 class="counter-title">IT-SOUL in numbers</h1>
+      <div class="container counter-container">
         <div class="row-full">
-          <div class="col-sm-3 wow fadeInDown">
-            <span style="background-color: rgba(0,0,0,.6); width: 96px; height: 96px; border-radius: 4px; display: inline-block; background-image: url(img/finish.svg); background-size: 64px; background-position: center; background-repeat: no-repeat"></span>
-            <h1 class="number-count" style="color: white; margin: 0; font-size: 3.2em; font-weight: 100">10</h1>
-            <p style="color: white; text-transform: uppercase; font-size: 1.2em">projects completed</p>
+
+          <div class="col-sm-3 wow fadeInDown counter-elem">
+            <span class="counter-icon counter-finish"></span>
+            <h1 class="counter-numb">10</h1>
+            <p>projects completed</p>
           </div>
 
-          <div class="col-sm-3 wow fadeInDown">
-            <span style="background-color: rgba(0,0,0,.6); width: 96px; height: 96px; border-radius: 4px; display: inline-block; background-image: url(img/happy.svg); background-size: 64px; background-position: center; background-repeat: no-repeat"></span>
-            <h1 class="number-count" style="color: white; margin: 0; font-size: 3.2em; font-weight: 100">10</h1>
-            <p style="color: white; text-transform: uppercase; font-size: 1.2em">happy clients</p>
+          <div class="col-sm-3 wow fadeInDown counter-elem">
+            <span class="counter-icon counter-happy"></span>
+            <h1 class="counter-numb">10</h1>
+            <p>happy clients</p>
           </div>
 
-          <div class="col-sm-3 wow fadeInDown">
-            <span style="background-color: rgba(0,0,0,.6); width: 96px; height: 96px; border-radius: 4px; display: inline-block; background-image: url(img/coffee.svg); background-size: 64px; background-position: center; background-repeat: no-repeat"></span>
-            <h1 class="number-count" style="color: white; margin: 0; font-size: 3.2em; font-weight: 100">85</h1>
-            <p style="color: white; text-transform: uppercase; font-size: 1.2em">Cups of coffee drunk</p>
+          <div class="col-sm-3 wow fadeInDown counter-elem">
+            <span class="counter-icon counter-coffee"></span>
+            <h1 class="counter-numb">85</h1>
+            <p>Cups of coffee drunk</p>
           </div>
 
-          <div class="col-sm-3 wow fadeInDown">
-            <span style="background-color: rgba(0,0,0,.6); width: 96px; height: 96px; border-radius: 4px; display: inline-block; background-image: url(img/time.svg); background-size: 64px; background-position: center; background-repeat: no-repeat"></span>
-            <h1 class="number-count" style="color: white; margin: 0; font-size: 3.2em; font-weight: 100">254</h1>
-            <p style="color: white; text-transform: uppercase; font-size: 1.2em">Hours of work</p>
+          <div class="col-sm-3 wow fadeInDown counter-elem">
+            <span class="counter-icon counter-time"></span>
+            <h1 class="counter-numb">254</h1>
+            <p>Hours of work</p>
           </div>
 
-        </div>
-      </div>
+        </div> <!-- ./row-full -->
+      </div> <!-- ./container -->
     </section>
 
 
+    <!-- FEEDBACK -->
     <form class="container feedback" name="contact" style="position: relative">
-      
       <div class="row-full">
         <div class="closeThis">
-        <div class="col-sm-12 feedback-title">
-          <h2>GET IN TOUCH, LET'S WORK TOGETHER</h2>
-        </div>
-        <div class="col-sm-6 wow fadeInLeft">
-          <input class="form-control" id="feedName" type="text" placeholder="Name" tabindex="1" required>
-          <input class="form-control" id="feedEmail" type="email" placeholder="Email" tabindex="2" required>
-          <input class="form-control" id="feedPhone" type="phone" placeholder="Phone" tabindex="3" required>
-        </div>
-        <div class="col-sm-6 wow fadeInRight">
-          <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" placeholder="Message" tabindex="4" required></textarea>
-        </div>
-        <div class="col-sm-12 feedback-submit">
-          <button class="btn btn-default" id="feedback-submit" type="submit" tabindex="5">Send Message</button>
-        </div>
+          <div class="col-sm-12 feedback-title">
+            <h2>GET IN TOUCH, LET'S WORK TOGETHER</h2>
+          </div>
+          <div class="col-sm-6 wow fadeInLeft">
+            <input class="form-control" id="feedName" type="text" placeholder="Name" tabindex="1" required>
+            <input class="form-control" id="feedEmail" type="email" placeholder="Email" tabindex="2" required>
+            <input class="form-control" id="feedPhone" type="phone" placeholder="Phone" tabindex="3" required>
+          </div>
+          <div class="col-sm-6 wow fadeInRight">
+            <textarea class="form-control" id="feedMsg" style="width: 100%; height: 100%" placeholder="Message" tabindex="4" required></textarea>
+          </div>
+          <div class="col-sm-12 feedback-submit">
+            <button class="btn btn-default" id="feedback-submit" type="button" tabindex="5">Send Message</button>
+          </div>
         </div>
       </div>
 
-      <div class="orag" style="position: absolute; width: 100%; top: 0; left: 0; overflow: hidden; display: none; opacity: 0; height: 0; background-color: white; padding: 100px 0; text-align: center">
-        <h1>THANK YOU</h1>
+      <div class="orag" style="position: absolute; width: 100%; top: 0; left: 0; overflow: hidden; display: none; opacity: 0; height: 0; background-color: white; text-align: center">
+        <div class="orag-msg" style="opacity: 0; position: relative; margin-top: -62px">
+          <h1 class="orag-thx">THANK YOU</h1>
+          <h3>We received your message</h3>
+        </div>
       </div>
 
     </form>
@@ -292,7 +313,7 @@ THE SOFTWARE. -->
 
     <section class="footer-top">
       <ul class="social-media wow zoomInUp">
-        <li><a href="http://vk.com"><img class="media-icon" src="img/vk.svg" alt></a></li>
+        <li><a href="https://vk.com/itsoulcompany"><img class="media-icon" src="img/vk.svg" alt></a></li>
         <li><a href="http://fb.com"><img class="media-icon" src="img/fb.svg" alt></a></li>
         <li><a href="http://twitter.com"><img class="media-icon" src="img/tw.svg" alt></a></li>
         <li><a href="http://googleplus.com"><img class="media-icon" src="img/gp.svg" alt></a></li>
@@ -303,14 +324,14 @@ THE SOFTWARE. -->
       <a style="color: black" href="tel:+380983716299">+38 (098) 371 62 99</a>
       <p style="display: inline">|</p>
       <a style="color: black" href="tel:+380673404436">38 (067) 340 44 36</a>
-      <a style="color: #CC9900; display: block" href="mailto:yarema@it-soul.com.ua">info@it-soul.com.ua</a>
+      <a style="color: #CC9900; display: block" href="mailto:info@it-soul.com.ua">info@it-soul.com.ua</a>
     </div>
     </section>
 
     <section class="footer-bottom">
-      <h1>IT-SOUL</h1>
-      <p style="color: #FFCC00">Made in Ukraine</p>
-      <p>© 2015 All rights reserved.</p>
+      <h1 class="wow slideInUp">IT-SOUL</h1>
+      <p class="wow slideInUp"style="color: #FFCC00">Made in Ukraine</p>
+      <p class="wow slideInUp">© 2015 All rights reserved.</p>
     </section>
   </div>
 

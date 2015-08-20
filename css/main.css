@@ -72,6 +72,63 @@ body {
   color: #97979A;
 }
 
+.arrow {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 32px;
+  left: 50%;
+  margin-left: -32px;
+  
+
+  width: 64px;
+  height: 64px;
+  background-image: url('../img/arrow.svg');
+  background-size: 100%;
+  display: block;
+  opacity: 0;
+  transition: bottom .2s;
+  -webkit-animation: fadeUp 1.6s,
+  arrow 1.6s infinite;
+  -webkit-animation-delay: 1.5s;
+}
+
+.arrow:hover {
+  animation-play-state: paused;
+  bottom: -5px;
+  opacity: 1;
+}
+
+@-webkit-keyframes arrow {
+  0% { opacity: .5; }
+  50% { opacity: .9; }
+  100% { opacity: .5; }
+}
+
+@-webkit-keyframes fadeUp {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: .5;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header-text {
+    padding: 0 20px;
+  }
+
+  .header-text > h1 {
+    font-size: 5em;
+  }
+}
+
+
+.gm-style-iw + div {display: none;}
+
 .line {
   width: 70px;
   border-bottom: 1px dotted white;
@@ -188,13 +245,21 @@ body {
 
 .testimonials-content {
   color: white;
-  padding: 75px 0 100px 0;
+  padding: 32px 0 100px 0;
   text-align: center;
   text-transform: uppercase;
 }
 
 .testimonials-content .line {
-  margin: 20px auto 0 auto;
+  margin: 20px auto;
+}
+
+.quote {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url(../img/quote-left.svg);
+  background-size: 100%;
 }
 /*.feutures {
   padding: 0 !important;
@@ -268,10 +333,11 @@ body {
 }*/
 
 .portfolio-container {
-  background-color: #f8f8f8;
+  /*background-color: #f8f8f8;*/
+  background-color: #F8F8F8;
   color: black;
   text-align: center;
-  padding: 2% 0;
+  /*padding: 2% 0;*/
 }
 
 .portfolio-container > h1,
@@ -291,8 +357,8 @@ body {
 
 
 #filters {
-  margin-top: 2%;
-  margin-bottom: 3%;
+  margin-top: 20px;
+  
   padding: 0;
   list-style: none;
 }
@@ -395,6 +461,87 @@ body {
 }
 
 
+
+.counter {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+}
+
+.counter-title,
+.counter-icon {
+  background-color: rgba(0,0,0,.6);
+}
+
+.counter-title {
+  padding: 60px 0;
+  margin: 0;
+}
+
+.counter-container {
+  padding: 128px 0;
+}
+
+.counter-elem {
+  margin-bottom: 40px;
+}
+
+.counter-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 4px;
+  display: inline-block;
+  background-size: 64px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.counter-finish {
+  background-image: url(../img/finish.svg);
+}
+
+.counter-happy {
+  background-image: url(../img/happy.svg);
+}
+
+.counter-coffee {
+  background-image: url(../img/coffee.svg);
+}
+
+.counter-time {
+  background-image: url(../img/time.svg);
+}
+
+.counter-numb {
+  font-size: 3.5em;
+  font-weight: 100;
+  margin: 0;
+}
+
+.counter-elem > p {
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 770px) {
+  .counter-container {
+    padding: 40px 0;
+  }
+}
+
+
+
+.lSSlideOuter .lSPager.lSpg > li a {
+  width: 20px !important;
+  height: 20px !important;
+  background-color: rgba(0,0,0,0) !important;
+  border: 2px solid white !important;
+}
+
+.lSSlideOuter .lSPager.lSpg > li.active a,
+.lSSlideOuter .lSPager.lSpg > li:hover a {
+  background-color: white !important;
+}
 /*.features {
   padding: 0 200px;
   text-align: center;
