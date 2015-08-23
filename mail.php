@@ -13,10 +13,10 @@
     $message = "<b>Name </b>: " . $name . "<br>" .
                 "<b>Email </b>" . $email . "<br>" .
                 "<b>Phone </b>" . $phone . "<br>" .
-                "<hr><br><b>Message </br>".$msg;
+                "<hr><br><b>Message </b></br>".$msg;
     $headers = 'From: webmaster@example.com' . "\r\n" .
         'Reply-To: webmaster@example.com' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+        'X-Mailer: PHP/' . phpversion ();
 
-    mail($to, $subject, $message, $headers);
+    mail ($to, $subject, $message, $headers);
 ?>

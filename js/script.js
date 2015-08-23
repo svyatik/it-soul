@@ -1,3 +1,11 @@
+/**
+ * @package IT-SOUL
+ * @subpackage js
+ * @copyright © 2015 by Kovtun Svyatoslav
+ * @license The MIT License (MIT)
+ */
+
+// WEBSITE PRELOADER
 $ (window).load (function () {
 
     $ ('.preloader').delay (500).animate ({
@@ -8,14 +16,21 @@ $ (window).load (function () {
         $ ('body').css ('overflow-y', 'scroll');
     });
 
+});
 
-    var $win = $ (window);
-    $ ('.background').each (function (){
+// Run when document will ready
+$ (document).ready (function () {
+    var $window = $ (window);
+
+    // Paralax Effect
+    // Smooth background scroll, when user scroll the page
+    $ ('.background').each (function () {
         var scroll_speed = 3;
         var $this = $ (this);
-        $ (window).scroll (function () {
-            if ($ (window).width () > 770) {
-                var bgScroll = -(($win.scrollTop () - $this.offset ().top) / scroll_speed);
+        $window.scroll (function () {
+            // Only for non-mobile devices
+            if ($window.width () > 770) {
+                var bgScroll = -(($window.scrollTop () - $this.offset ().top) / scroll_speed);
                 var bgPosition = 'center '+ bgScroll + 'px';
                 $this.css ('background-position', bgPosition);
             }
@@ -23,7 +38,7 @@ $ (window).load (function () {
     });
 
 
-    var $window = $ (window);
+    // Smooth animation init
     var scrollTime = 0.4;
     var scrollDistance = 150;
 
@@ -44,7 +59,7 @@ $ (window).load (function () {
 
     var filterList = {
         init: function () {
-            $('#portfoliolist').mixitup({
+            $('#portfoliolist').mixitup ({
                 targetSelector: '.portfolio',
                 filterSelector: '.filter',
                 effects: ['fade'],
@@ -52,9 +67,9 @@ $ (window).load (function () {
             });
         }
     };
-    filterList.init();
+    filterList.init ();
 
-    function initialize() {
+    function googleMaps () {
         var cord = new google.maps.LatLng(49.841725, 24.031765);
         
         var mapOptions = {
@@ -154,24 +169,25 @@ $ (window).load (function () {
         var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
     }
 
-
-    initialize ();
+    // Init the Google Maps
+    googleMaps ();
 
     // Init the WOW animation on website
     new WOW().init();
 
 
-    // chose the navbar item when scrolling website
     var start = true;
     $ (window).on ('scroll', function () {
+        // Animated counter when scrolled to it
         if ($ ('.counter').offset().top - $ (window).height () <= $ (window).scrollTop ()) {
             $ ('.counter-numb').addClass ('count');
             if (start) {
-                test ();
+                animateCounter ();
                 start = false;
             }
         }
 
+        // Init Item choser in navbar
         if ( $(window).scrollTop () > $ ('.start').position ().top) {
             $ ('.navbar-main').addClass ('navbar-show')
         } else {
@@ -183,7 +199,7 @@ $ (window).load (function () {
             $ ('#myNavbar li:eq(0)').addClass ('active');
         }
 
-        if ($ (window).scrollTop ()+50 >= $ ('div[name="feutures"]').offset ().top) {
+        if ($ (window).scrollTop ()+50 >= $ ('div[name="features"]').offset ().top) {
             $ ('#myNavbar li').removeClass ('active');
             $ ('#myNavbar li:eq(1)').addClass ('active');
         }
@@ -201,7 +217,7 @@ $ (window).load (function () {
         }
     });
 
-    function test () {
+    function animateCounter () {
         $ ('.count').each(function () {
             $ (this).prop ('Counter',0).animate ({
                 Counter: $ (this).text ()
@@ -231,7 +247,17 @@ $ (window).load (function () {
     });
 
 
-    $ ('.feedback').on ('submit', function (e) {
+    // Init the testimonials
+    $('#imageGallery').lightSlider({
+        adaptiveHeight: true,
+        item: 1,
+        slideMargin: 0,
+        speed: 1000,
+        controls: false
+    });
+
+    // Submit Feedback
+    $ ('#feedback').on ('submit', function (e) {
         $.ajax ({
             type: "Post",
             url: "mail.php",
@@ -245,32 +271,21 @@ $ (window).load (function () {
             cache: false,
             success: closeFeedback ()
         });
-        return false;
+        e.preventDefault ();
     });
 
     function closeFeedback () {
         $ ('.feedback-submit').on ('click', function (e) {
             
-            $ ('.orag').css ('display', 'block');
-            $ ('.orag').animate ({
+            $ ('.thx').css ('display', 'block');
+            $ ('.thx').animate ({
                 height: '100%',
                 opacity: 1
             });
-            $ ('.orag-msg').animate ({
+            $ ('.thx-cont').animate ({
                 top: '50%',
                 opacity: 1
             }, 500, 'easeOutCirc');
         });
     }
-
-
-    $('#imageGallery').lightSlider({
-        adaptiveHeight: true,
-        item: 1,
-        slideMargin: 0,
-        loop: true,
-        auto: true,
-        speed: 1000,
-        pause: 6000
-    });
 });
